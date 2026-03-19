@@ -20,23 +20,20 @@
     <section class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
             <div class="flex flex-wrap justify-center gap-8">
-                <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] max-w-sm">
-                    <x-project-card 
-                        title="Enterprise CRM" 
-                        description="A comprehensive customer relationship management platform utilized to track thousands of daily client interactions."
-                        image="https://placehold.co/800x600/111827/6C63FF?text=Project+Mockup"
-                        :tags="['Laravel', 'Vue SPA']"
-                    />
-                </div>
-
-                <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] max-w-sm">
-                    <x-project-card 
-                        title="Fintech SaaS" 
-                        description="A high-frequency trading analytics dashboard delivering real-time metric visualization over WebSockets."
-                        image="https://placehold.co/800x600/111827/00D1FF?text=Project+Mockup"
-                        :tags="['Laravel', 'React']"
-                    />
-                </div>
+                @foreach($portfolios as $portfolio)
+                    @php
+                        $featuredImage = $portfolio->images->where('is_featured', true)->first() ?? $portfolio->images->first();
+                        $imagePath = $featuredImage ? asset('storage/' . $featuredImage->path) : 'https://placehold.co/800x600/111827/6C63FF?text=No+Image';
+                    @endphp
+                    <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] max-w-sm">
+                        <x-project-card 
+                            :title="$portfolio->title" 
+                            :description="$portfolio->description"
+                            :image="$imagePath"
+                            :tags="$portfolio->techStacks->pluck('name')->toArray()"
+                        />
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>

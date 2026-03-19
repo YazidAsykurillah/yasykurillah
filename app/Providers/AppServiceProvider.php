@@ -10,6 +10,8 @@ use App\Policies\PermissionPolicy;
 use App\Policies\RolePolicy;
 use App\Models\TechStack;
 use App\Policies\TechStackPolicy;
+use App\Models\Portfolio;
+use App\Policies\PortfolioPolicy;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,6 +32,7 @@ class AppServiceProvider extends ServiceProvider
         Gate::policy(Role::class, RolePolicy::class);
         Gate::policy(Permission::class, PermissionPolicy::class);
         Gate::policy(TechStack::class, TechStackPolicy::class);
+        Gate::policy(Portfolio::class, PortfolioPolicy::class);
 
         // Implicitly grant "Super Admin" role all permissions
         Gate::before(function ($user, $ability) {

@@ -1,11 +1,14 @@
 <?php
 
+use App\Models\Portfolio;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $portfolios = Portfolio::with(['techStacks', 'images'])->latest()->get();
+    return view('welcome', compact('portfolios'));
 });
 
 Route::get('/portfolio', function () {
-    return view('portfolio');
+    $portfolios = Portfolio::with(['techStacks', 'images'])->latest()->get();
+    return view('portfolio', compact('portfolios'));
 });
