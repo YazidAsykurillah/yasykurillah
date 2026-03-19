@@ -285,7 +285,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
             <div class="text-center mb-16 border-b border-white/5 pb-6">
                 <h2 class="text-[#00D1FF] font-semibold tracking-widest uppercase text-xs mb-3">Discovered Worlds</h2>
-                <h3 class="text-4xl font-bold font-heading text-white">Featured Portfolio</h3>
+                <h3 class="text-4xl font-bold font-heading text-white">Selected Portfolio</h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
