@@ -8,6 +8,8 @@ use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use App\Policies\PermissionPolicy;
 use App\Policies\RolePolicy;
+use App\Models\TechStack;
+use App\Policies\TechStackPolicy;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,6 +29,7 @@ class AppServiceProvider extends ServiceProvider
         // Explicitly register policies for Spatie models
         Gate::policy(Role::class, RolePolicy::class);
         Gate::policy(Permission::class, PermissionPolicy::class);
+        Gate::policy(TechStack::class, TechStackPolicy::class);
 
         // Implicitly grant "Super Admin" role all permissions
         Gate::before(function ($user, $ability) {
