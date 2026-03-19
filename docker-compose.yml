@@ -1,0 +1,60 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+    networks:
+      - yasykurillah-network
+      - web-gateway # Tambahkan ini
+
+  # Nginx (Official Image)
+  web-yasykurillah:
+    image: nginx:alpine
+    volumes:
+      - .:/var/www/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - app
+    networks:
+      - yasykurillah-network
+      - web-gateway # Tambahkan ini
+
+  # Database MySQL 8.0
+  db:
+    container_name: db-yasykurillah
+    image: mysql:8.0
+    restart: always
+    environment:
+      - MYSQL_DATABASE=yasykurillah
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_USER=yazid
+      - MYSQL_PASSWORD=secret
+    volumes:
+      - db-data-yasykurillah:/var/lib/mysql
+    networks:
+      - yasykurillah-network
+  # Tambahkan phpMyAdmin di sini
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin_yasykurillah
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: secret
+    ports:
+      - "8091:80"
+    networks:
+      - yasykurillah-network
+
+networks:
+  yasykurillah-network:
+    driver: bridge
+  web-gateway: # Daftarkan network global di sini
+    external: true
+
+volumes:
+  db-data-yasykurillah:
