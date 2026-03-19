@@ -288,20 +288,34 @@
                 <h3 class="text-4xl font-bold font-heading text-white">Selected Portfolio</h3>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <x-project-card 
-                    title="Enterprise CRM" 
-                    description="A comprehensive customer relationship management platform utilized to track thousands of daily client interactions."
-                    image="https://placehold.co/800x600/111827/6C63FF?text=Project+Mockup"
-                    :tags="['Laravel', 'Vue SPA']"
-                />
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] max-w-sm">
+                    <x-project-card 
+                        title="Enterprise CRM" 
+                        description="A comprehensive customer relationship management platform utilized to track thousands of daily client interactions."
+                        image="https://placehold.co/800x600/111827/6C63FF?text=Project+Mockup"
+                        :tags="['Laravel', 'Vue SPA']"
+                    />
+                </div>
 
-                <x-project-card 
-                    title="Fintech SaaS" 
-                    description="A high-frequency trading analytics dashboard delivering real-time metric visualization over WebSockets."
-                    image="https://placehold.co/800x600/111827/00D1FF?text=Project+Mockup"
-                    :tags="['Laravel', 'React']"
-                />
+                <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] max-w-sm">
+                    <x-project-card 
+                        title="Fintech SaaS" 
+                        description="A high-frequency trading analytics dashboard delivering real-time metric visualization over WebSockets."
+                        image="https://placehold.co/800x600/111827/00D1FF?text=Project+Mockup"
+                        :tags="['Laravel', 'React']"
+                    />
+                </div>
+                
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="/portfolio" class="inline-flex items-center px-10 py-4 text-sm font-bold tracking-widest uppercase rounded bg-transparent border-2 border-[#00D1FF] text-[#00D1FF] hover:bg-[#00D1FF] hover:text-[#0B0F19] shadow-[0_0_15px_rgba(0,209,255,0.2)] hover:shadow-[0_0_30px_rgba(0,209,255,0.4)] transition-all duration-300 group">
+                    Explore Full Portfolio
+                    <svg class="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
             </div>
         </div>
     </section>

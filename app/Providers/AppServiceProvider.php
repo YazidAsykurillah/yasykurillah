@@ -2,7 +2,12 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
+use App\Policies\PermissionPolicy;
+use App\Policies\RolePolicy;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +24,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Explicitly register policies for Spatie models
+        Gate::policy(Role::class, RolePolicy::class);
+        Gate::policy(Permission::class, PermissionPolicy::class);
+
+        // Implicitly grant "Super Admin" role all permissions
+        Gate::before(function ($user, $ability) {
+            return $user->hasRole('Super Admin') ? true : null;
+        });
     }
 }

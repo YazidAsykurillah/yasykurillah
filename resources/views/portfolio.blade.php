@@ -18,28 +18,25 @@
 
     <!-- Projects Grid -->
     <section class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <x-project-card 
-                    title="Enterprise CRM" 
-                    description="A comprehensive customer relationship management platform utilized to track thousands of daily client interactions."
-                    image="https://placehold.co/800x600/111827/6C63FF?text=Project+Mockup"
-                    :tags="['Laravel', 'Vue SPA']"
-                />
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] max-w-sm">
+                    <x-project-card 
+                        title="Enterprise CRM" 
+                        description="A comprehensive customer relationship management platform utilized to track thousands of daily client interactions."
+                        image="https://placehold.co/800x600/111827/6C63FF?text=Project+Mockup"
+                        :tags="['Laravel', 'Vue SPA']"
+                    />
+                </div>
 
-                <x-project-card 
-                    title="Fintech SaaS" 
-                    description="A high-frequency trading analytics dashboard delivering real-time metric visualization over WebSockets."
-                    image="https://placehold.co/800x600/111827/00D1FF?text=Project+Mockup"
-                    :tags="['Laravel', 'React']"
-                />
-
-                <x-project-card 
-                    title="Logic Orbit" 
-                    description="An open-source visualization tool for mapping complex backend dependencies and database schema relationships."
-                    image="https://placehold.co/800x600/111827/FFB800?text=Logic+Orbit"
-                    :tags="['TypeScript', 'D3.js', 'GraphQL']"
-                />
+                <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] max-w-sm">
+                    <x-project-card 
+                        title="Fintech SaaS" 
+                        description="A high-frequency trading analytics dashboard delivering real-time metric visualization over WebSockets."
+                        image="https://placehold.co/800x600/111827/00D1FF?text=Project+Mockup"
+                        :tags="['Laravel', 'React']"
+                    />
+                </div>
             </div>
         </div>
     </section>
