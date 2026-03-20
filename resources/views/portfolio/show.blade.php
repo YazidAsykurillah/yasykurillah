@@ -69,21 +69,87 @@
                         </div>
                     </div>
 
-                    <!-- Project Gallery -->
+                    <!-- Project Gallery Slider -->
                     <div class="space-y-8">
                         <h2 class="text-2xl font-bold font-heading text-white pl-4 flex items-center">
                             <span class="w-10 h-[1px] bg-[#00D1FF] mr-4"></span> Visual Documentation
                         </h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            @foreach($portfolio->images as $image)
-                                <div class="glass-card rounded-2xl overflow-hidden group">
-                                    <div class="aspect-[16/10] overflow-hidden">
-                                        <img src="{{ asset('storage/' . $image->path) }}" alt="{{ $portfolio->title }} Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        
+                        <div class="relative group/slider overflow-hidden glass-card rounded-2xl">
+                            <!-- Slider Container -->
+                            <div id="project-slider" class="flex transition-transform duration-500 ease-out">
+                                @foreach($portfolio->images as $image)
+                                    <div class="min-w-full aspect-[16/9] relative">
+                                        <img src="{{ asset('storage/' . $image->path) }}" 
+                                             alt="{{ $portfolio->title }} Image" 
+                                             class="w-full h-full object-cover">
                                     </div>
+                                @endforeach
+                            </div>
+
+                            <!-- Navigation Buttons -->
+                            @if($portfolio->images->count() > 1)
+                                <button id="prev-slide" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-black/40 backdrop-blur-md text-white border border-white/10 opacity-0 group-hover/slider:opacity-100 transition-all hover:bg-[#6C63FF] hover:border-[#6C63FF]/50 z-10">
+                                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                                </button>
+                                <button id="next-slide" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-black/40 backdrop-blur-md text-white border border-white/10 opacity-0 group-hover/slider:opacity-100 transition-all hover:bg-[#6C63FF] hover:border-[#6C63FF]/50 z-10">
+                                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                </button>
+
+                                <!-- Indicators -->
+                                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+                                    @foreach($portfolio->images as $index => $image)
+                                        <button class="slider-dot w-2.5 h-2.5 rounded-full bg-white/30 border border-white/10 transition-all hover:bg-white/60" data-slide="{{ $index }}"></button>
+                                    @endforeach
                                 </div>
-                            @endforeach
+                            @endif
                         </div>
                     </div>
+
+                    @if($portfolio->images->count() > 1)
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const slider = document.getElementById('project-slider');
+                            const dots = document.querySelectorAll('.slider-dot');
+                            const prevBtn = document.getElementById('prev-slide');
+                            const nextBtn = document.getElementById('next-slide');
+                            let currentSlide = 0;
+                            const slideCount = {{ $portfolio->images->count() }};
+
+                            function updateSlider() {
+                                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+                                dots.forEach((dot, index) => {
+                                    if (index === currentSlide) {
+                                        dot.classList.remove('bg-white/30', 'w-2.5');
+                                        dot.classList.add('bg-[#00D1FF]', 'w-8', 'shadow-[0_0_10px_#00D1FF]');
+                                    } else {
+                                        dot.classList.add('bg-white/30', 'w-2.5');
+                                        dot.classList.remove('bg-[#00D1FF]', 'w-8', 'shadow-[0_0_10px_#00D1FF]');
+                                    }
+                                });
+                            }
+
+                            nextBtn.addEventListener('click', () => {
+                                currentSlide = (currentSlide + 1) % slideCount;
+                                updateSlider();
+                            });
+
+                            prevBtn.addEventListener('click', () => {
+                                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                                updateSlider();
+                            });
+
+                            dots.forEach(dot => {
+                                dot.addEventListener('click', () => {
+                                    currentSlide = parseInt(dot.getAttribute('data-slide'));
+                                    updateSlider();
+                                });
+                            });
+
+                            updateSlider();
+                        });
+                    </script>
+                    @endif
                 </div>
 
                 <!-- Sidebar (Right - 1/3) -->
