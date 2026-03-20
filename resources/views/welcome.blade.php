@@ -73,7 +73,7 @@
                             <div class="w-32 h-32 rounded-full border-2 border-[#00D1FF] shadow-[0_0_30px_rgba(0,209,255,0.4)] overflow-hidden relative z-10 group bg-[#111827]">
                                 <!-- A subtle color overlay to blend the image into the space theme -->
                                 <div class="absolute inset-0 bg-[#6C63FF]/20 mix-blend-overlay z-20 pointer-events-none group-hover:bg-transparent transition-colors duration-500"></div>
-                                <img src="{{ asset('storage/yazid-asykurillah.png') }}" alt="Yazid Asykurillah" class="w-full h-full object-cover group-hover:scale-110 grayscale-[30%] contrast-[1.1] brightness-90 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500 relative z-10" />
+                                <img src="{{ asset('yazid-asykurillah.png') }}" alt="Yazid Asykurillah" class="w-full h-full object-cover group-hover:scale-110 grayscale-[30%] contrast-[1.1] brightness-90 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500 relative z-10" />
                             </div>
                         </div>
                     </div>
@@ -179,7 +179,7 @@
                         <div class="absolute w-44 h-44 bg-[#6C63FF]/15 rounded-full blur-3xl animate-pulse"></div>
                         <div class="absolute w-32 h-32 bg-[#00D1FF]/10 rounded-full blur-2xl animate-pulse" style="animation-delay:1s;"></div>
                         <div class="w-24 h-24 rounded-full border-2 border-[#6C63FF]/70 shadow-[0_0_50px_rgba(108,99,255,0.5)] bg-[#0B0F19] flex items-center justify-center relative z-10">
-                            <img src="{{ asset('storage/abstract-logo.png') }}" alt="Core" class="w-14 h-14 object-contain opacity-90" />
+                            <img src="{{ asset('abstract-logo.png') }}" alt="Core" class="w-14 h-14 object-contain opacity-90" />
                         </div>
                     </div>
 

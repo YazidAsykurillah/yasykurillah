@@ -4,7 +4,7 @@
         <div class="flex justify-between items-center h-20">
             <div class="flex-shrink-0 flex items-center">
                 <a href="/" class="font-heading font-bold text-2xl tracking-tight text-white flex items-center group">
-                    <img src="{{ asset('storage/abstract-logo.png') }}" alt="Developer Logo" class="w-8 h-8 mr-3 object-cover rounded-md shadow-[0_0_10px_rgba(108,99,255,0.4)] group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(0,209,255,0.6)] transition-all duration-300" />
+                    <img src="{{ asset('abstract-logo.png') }}" alt="Developer Logo" class="w-8 h-8 mr-3 object-cover rounded-md shadow-[0_0_10px_rgba(108,99,255,0.4)] group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(0,209,255,0.6)] transition-all duration-300" />
                     Yazid<span class="text-gray-500 font-light">&nbsp;Asykurillah</span>
                 </a>
             </div>
