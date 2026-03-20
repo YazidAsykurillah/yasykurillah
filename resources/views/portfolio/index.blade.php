@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Portfolio | Yazid Asykurillah')
 
 @section('content')
     <!-- Portfolio Hero -->
@@ -31,6 +30,7 @@
                             :description="$portfolio->description"
                             :image="$imagePath"
                             :tags="$portfolio->techStacks->pluck('name')->toArray()"
+                            :slug="$portfolio->slug"
                         />
                     </div>
                 @endforeach

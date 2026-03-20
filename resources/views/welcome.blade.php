@@ -300,6 +300,7 @@
                             :description="$portfolio->description"
                             :image="$imagePath"
                             :tags="$portfolio->techStacks->pluck('name')->toArray()"
+                            :slug="$portfolio->slug"
                         />
                     </div>
                 @endforeach

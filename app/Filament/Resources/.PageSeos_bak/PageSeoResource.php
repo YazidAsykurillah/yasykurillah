@@ -12,7 +12,7 @@ use Filament\Actions\EditAction;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
-use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -43,7 +43,7 @@ class PageSeoResource extends Resource
                             ->required()
                             ->unique(ignoreRecord: true)
                             ->placeholder('e.g. / or /portfolio')
-                            ->helperText('Relative path of the page from the base URL. Use "*" to set global default SEO for all pages.'),
+                            ->helperText('Relative path of the page from the base URL.'),
                     ]),
 
                 Section::make('Search Engine Optimization')
