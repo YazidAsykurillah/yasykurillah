@@ -450,20 +450,43 @@
             <p class="text-xl text-gray-400 mb-12">Let's build something amazing together.</p>
 
             <div class="glass-card p-8 md:p-12 rounded-2xl text-left border-t border-[#6C63FF]/30 shadow-[0_-10px_40px_rgba(108,99,255,0.1)]">
-                <form class="space-y-6">
+                @if(session('success'))
+                    <div class="mb-8 p-4 bg-green-500/10 border border-green-500/30 rounded-xl text-green-400 flex items-center shadow-[0_0_15px_rgba(34,197,94,0.1)] animate-pulse">
+                        <svg class="w-5 h-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        {{ session('success') }}
+                    </div>
+                @endif
+
+                @if($errors->any())
+                    <div class="mb-8 p-4 bg-red-500/10 border border-red-500/30 rounded-xl text-red-400 shadow-[0_0_15px_rgba(239,68,68,0.1)]">
+                        <ul class="list-disc list-inside text-sm">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+                <form action="{{ route('contact.store') }}#contact" method="POST" class="space-y-6">
+                    @csrf
+                    <!-- Honeypot Spam Protection -->
+                    <div class="hidden">
+                        <input type="text" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="name" class="block text-xs font-semibold tracking-widest uppercase text-gray-400 mb-2">Callsign (Name)</label>
-                            <input type="text" id="name" class="w-full bg-[#0B0F19] border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-[#00D1FF] focus:ring-1 focus:ring-[#00D1FF] transition-colors" placeholder="Commander Shepard">
+                            <input type="text" id="name" name="name" value="{{ old('name') }}" class="w-full bg-[#0B0F19] border @error('name') border-red-500/50 @else border-white/10 @enderror rounded px-4 py-3 text-white focus:outline-none focus:border-[#00D1FF] focus:ring-1 focus:ring-[#00D1FF] transition-colors" placeholder="Commander Shepard" required>
                         </div>
                         <div>
                             <label for="email" class="block text-xs font-semibold tracking-widest uppercase text-gray-400 mb-2">Comms Link (Email)</label>
-                            <input type="email" id="email" class="w-full bg-[#0B0F19] border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-[#00D1FF] focus:ring-1 focus:ring-[#00D1FF] transition-colors" placeholder="shepard@normandy.com">
+                            <input type="email" id="email" name="email" value="{{ old('email') }}" class="w-full bg-[#0B0F19] border @error('email') border-red-500/50 @else border-white/10 @enderror rounded px-4 py-3 text-white focus:outline-none focus:border-[#00D1FF] focus:ring-1 focus:ring-[#00D1FF] transition-colors" placeholder="shepard@normandy.com" required>
                         </div>
                     </div>
                     <div>
                         <label for="message" class="block text-xs font-semibold tracking-widest uppercase text-gray-400 mb-2">Transmission Details</label>
-                        <textarea id="message" rows="5" class="w-full bg-[#0B0F19] border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-[#00D1FF] focus:ring-1 focus:ring-[#00D1FF] transition-colors resize-none" placeholder="We need to build a system that..."></textarea>
+                        <textarea id="message" name="message" rows="5" class="w-full bg-[#0B0F19] border @error('message') border-red-500/50 @else border-white/10 @enderror rounded px-4 py-3 text-white focus:outline-none focus:border-[#00D1FF] focus:ring-1 focus:ring-[#00D1FF] transition-colors resize-none" placeholder="We need to build a system that..." required>{{ old('message') }}</textarea>
                     </div>
                     
                     <button type="submit" class="w-full inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded bg-transparent border-2 border-[#6C63FF] text-white hover:bg-[#6C63FF] shadow-[0_0_15px_rgba(108,99,255,0.3)] hover:shadow-[0_0_30px_rgba(108,99,255,0.6)] transition-all duration-300 uppercase tracking-widest">
