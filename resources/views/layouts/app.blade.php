@@ -3,7 +3,46 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', config('app.name', 'Astronomic Portfolio'))</title>
+    @php
+        $currentPath = request()->getPathInfo();
+        $pageSeo = \App\Models\PageSeo::where('page_path', $currentPath)->first();
+        
+        // If we are on a portfolio detail page, the Portfolio model might be passed.
+        // Or we can check if the route has a portfolio parameter.
+        $portfolio = request()->route('portfolio'); 
+        if (is_string($portfolio)) {
+            $portfolio = \App\Models\Portfolio::where('slug', $portfolio)->first();
+        }
+
+        $seoTitle = $portfolio?->seo_title ?: ($pageSeo?->seo_title ?: ($portfolio?->title ?: config('app.name', 'Astronomic Portfolio')));
+        $seoDescription = strip_tags($portfolio?->seo_description ?: ($pageSeo?->seo_description ?: ($portfolio?->description ?: 'Full Stack Developer Building Scalable Systems')));
+        
+        $ogTitle = $portfolio?->og_title ?: ($pageSeo?->og_title ?: $seoTitle);
+        $ogDescription = strip_tags($portfolio?->og_description ?: ($pageSeo?->og_description ?: $seoDescription));
+        
+        $featuredImage = null;
+        if ($portfolio) {
+            $featuredImage = $portfolio->images->where('is_featured', true)->first() ?? $portfolio->images->first();
+        }
+        $ogImage = $portfolio?->og_image ? asset('storage/' . $portfolio->og_image) : ($pageSeo?->og_image ? asset('storage/' . $pageSeo->og_image) : ($featuredImage ? asset('storage/' . $featuredImage->path) : asset('yazid-asykurillah.png')));
+    @endphp
+
+    <title>{{ $seoTitle }}</title>
+    <meta name="description" content="{{ $seoDescription }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="{{ $ogTitle }}">
+    <meta property="og:description" content="{{ $ogDescription }}">
+    <meta property="og:image" content="{{ $ogImage }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="{{ $ogTitle }}">
+    <meta property="twitter:description" content="{{ $ogDescription }}">
+    <meta property="twitter:image" content="{{ $ogImage }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

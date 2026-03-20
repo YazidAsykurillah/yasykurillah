@@ -9,7 +9,7 @@
         <h4 class="text-2xl font-bold font-heading text-white mb-3 flex items-center">
             {{ $title }}
         </h4>
-        <p class="text-gray-400 text-sm mb-6 line-clamp-2">{{ $description }}</p>
+        <p class="text-gray-400 text-sm mb-6 line-clamp-2">{!! strip_tags($description) !!}</p>
         
         <div class="flex flex-wrap gap-2 mb-6">
             @foreach($tags as $tag)
