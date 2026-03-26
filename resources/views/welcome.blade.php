@@ -28,7 +28,7 @@
                 <a href="#projects" class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 text-base font-medium rounded bg-[#6C63FF] text-white hover:bg-[#5a53e6] shadow-[0_0_20px_rgba(108,99,255,0.4)] hover:shadow-[0_0_30px_rgba(108,99,255,0.6)] transition-all duration-300">
                     Explore My Work
                 </a>
-                <a href="https://github.com" target="_blank" class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 text-base font-medium rounded text-white bg-transparent border border-white/20 hover:border-white/50 hover:bg-white/5 transition-all duration-300 group">
+                <a href="{{ request()->is('/') ? '#contact' : '/#contact' }}" class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 text-base font-medium rounded text-white bg-transparent border border-white/20 hover:border-white/50 hover:bg-white/5 transition-all duration-300 group">
                     Start a Project
                     <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -381,8 +381,8 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
             <div class="text-center mb-16 relative z-10">
-                <h2 class="text-[#6C63FF] font-semibold tracking-widest uppercase text-xs mb-3">My Experience</h2>
-                <h3 class="text-4xl font-bold font-heading text-white">Mission Log</h3>
+                <h2 class="text-[#6C63FF] font-semibold tracking-widest uppercase text-xs mb-3">Mission Log</h2>
+                <h3 class="text-4xl font-bold font-heading text-white">My Experience</h3>
             </div>
 
             <!-- Vertical Line -->
@@ -446,8 +446,8 @@
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-gradient-to-t from-[#6C63FF]/10 to-transparent blur-[50px] z-0"></div>
 
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold font-heading text-white mb-4">Have a project mission?</h2>
-            <p class="text-xl text-gray-400 mb-12">Let's build something amazing together.</p>
+            <h2 class="text-4xl md:text-4xl font-bold font-heading text-white mb-4">Have a project mission?</h2>
+            <p class="text-gray-400 mb-12">Let's build something amazing together.</p>
 
             <div class="glass-card p-8 md:p-12 rounded-2xl text-left border-t border-[#6C63FF]/30 shadow-[0_-10px_40px_rgba(108,99,255,0.1)]">
                 @if(session('success'))
