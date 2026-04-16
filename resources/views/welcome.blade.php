@@ -399,7 +399,7 @@
                             <div class="text-[#6C63FF] font-semibold text-sm tracking-wider uppercase mb-3">2023 - PRESENT</div>
                             <h4 class="text-white font-bold text-2xl mb-1">Senior Full Stack Developer</h4>
                             <div class="text-gray-400 text-md mb-6">Bit Maker Automation.</div>
-                            <p class="text-gray-400 leading-relaxed">Leading the development of scalable cloud applications and mentoring junior explorers in modern web technologies.</p>
+                            <p class="text-gray-400 leading-relaxed">Leading the development team and mentoring junior developers in modern web technologies.</p>
                         </div>
                     </div>
                 </div>

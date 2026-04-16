@@ -8,7 +8,7 @@
                     Yazid<span class="text-gray-500 font-light">&nbsp;Asykurillah</span>
                 </a>
                 <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
-                    Building the next generation of digital infrastructure through scalable architecture and intuitive engineering.
+                    Building application through scalable architecture and intuitive engineering.
                 </p>
             </div>
 
