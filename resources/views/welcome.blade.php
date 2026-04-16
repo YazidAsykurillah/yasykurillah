@@ -16,7 +16,7 @@
             </div>
             
             <h1 class="text-4xl md:text-6xl lg:text-6xl font-bold tracking-tight mb-8 font-heading text-white leading-tight">
-                I Build Fast and Scalable<br class="hidden md:block" /><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00D1FF] via-[#6C63FF] to-[#00D1FF] animate-gradient-x">Web Applications</span> From Idea to Production.
+                I Build Fast and Scalable<br class="hidden md:block" /><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00D1FF] via-[#6C63FF] to-[#00D1FF] animate-gradient-x"> Web Applications</span> From Idea to Production.
             </h1>
             
             <p class="mt-6 text-gray-400 max-w-2xl mx-auto leading-relaxed">
