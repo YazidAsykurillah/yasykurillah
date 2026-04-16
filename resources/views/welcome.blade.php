@@ -12,24 +12,23 @@
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00D1FF] opacity-75"></span>
                   <span class="relative inline-flex rounded-full h-2 w-2 bg-[#00D1FF]"></span>
                 </span>
-                Ready For Launch
+                Full Stack Enginer
             </div>
             
-            <h1 class="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight mb-8 font-heading text-white leading-tight">
-                Full Stack Developer Building <br class="hidden md:block" />
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00D1FF] via-[#6C63FF] to-[#00D1FF] animate-gradient-x">Scalable Systems</span> <br class="hidden md:block" /> Across the Digital Universe.
+            <h1 class="text-4xl md:text-6xl lg:text-6xl font-bold tracking-tight mb-8 font-heading text-white leading-tight">
+                I Build Fast and Scalable<br class="hidden md:block" /><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00D1FF] via-[#6C63FF] to-[#00D1FF] animate-gradient-x">Web Applications</span> From Idea to Production.
             </h1>
             
             <p class="mt-6 text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                Helping startups and businesses launch reliable digital products with scalable architecture, efficient APIs, and intuitive user interfaces.
+                Experienced in building business systems, dashboards, and API-driven platforms.
             </p>
             
             <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
                 <a href="#projects" class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 text-base font-medium rounded bg-[#6C63FF] text-white hover:bg-[#5a53e6] shadow-[0_0_20px_rgba(108,99,255,0.4)] hover:shadow-[0_0_30px_rgba(108,99,255,0.6)] transition-all duration-300">
-                    Explore My Work
+                    View My Work
                 </a>
                 <a href="{{ request()->is('/') ? '#contact' : '/#contact' }}" class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 text-base font-medium rounded text-white bg-transparent border border-white/20 hover:border-white/50 hover:bg-white/5 transition-all duration-300 group">
-                    Start a Project
+                    Contact Me
                     <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
@@ -47,16 +46,16 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
                     <div>
                         <h2 class="text-[#00D1FF] font-semibold tracking-widest uppercase text-xs mb-3 flex items-center">
-                            <span class="w-8 h-[1px] bg-[#00D1FF] mr-3"></span> Profile Data
+                            <span class="w-8 h-[1px] bg-[#00D1FF] mr-3"></span> System Architec & Full Stack Engineer
                         </h2>
-                        <h3 class="text-3xl md:text-5xl font-bold font-heading mb-6 text-white">System Architect & Full Stack Developer</h3>
+                        <h3 class="text-3xl md:text-5xl font-bold font-heading mb-6 text-white">About Me</h3>
                         
                         <div class="space-y-6 text-gray-400 leading-relaxed">
                             <p>
-                                I design and build scalable digital systems that power modern web applications. My expertise lies in backend architecture with Laravel, combined with responsive and reactive front-end technologies to deliver fast, reliable, and maintainable products.
+                                I’m a Full Stack Engineer with 7+ years of experience building web applications that are not only functional, but also reliable and scalable. I enjoy turning ideas into real products whether it’s a simple website or a complex system with multiple workflows and integrations.
                             </p>
                             <p>
-                                From database design to production deployment, I craft systems that remain efficient, maintainable, and ready to scale as digital products evolve.
+                                My focus is always the same: build solutions that are efficient, easy to use, and ready for real-world usage.
                             </p>
                         </div>
                     </div>
@@ -147,24 +146,24 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-[#00D1FF] font-semibold tracking-widest uppercase text-xs mb-3">Technological Universe</h2>
+                    <h2 class="text-[#00D1FF] font-semibold tracking-widest uppercase text-xs mb-3">Skills</h2>
                     <h3 class="text-4xl font-bold font-heading text-white mb-6">Tech Stack</h3>
                     <p class="text-gray-400 leading-relaxed mb-10">
-                        Each technology orbits as its own planet in alignment with the system. Hover over any planet to pause its orbit and explore its role.
+                        Each skills orbits as its own planet in alignment with the system. Hover over any planet to pause its orbit and explore its role.
                     </p>
 
                     <div class="space-y-4">
                         <div class="flex items-center gap-3">
                             <span class="w-3 h-3 rounded-full bg-[#FFB800] shadow-[0_0_8px_#FFB800] flex-shrink-0"></span>
                             <div>
-                                <span class="text-white font-semibold text-sm">Backend Orbit</span>
+                                <span class="text-white font-semibold text-sm">Backend</span>
                                 <p class="text-gray-500 text-xs">Laravel · Node.js · PostgreSQL· MySQL</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-3">
                             <span class="w-3 h-3 rounded-full bg-[#00D1FF] shadow-[0_0_8px_#00D1FF] flex-shrink-0"></span>
                             <div>
-                                <span class="text-white font-semibold text-sm">Frontend Orbit</span>
+                                <span class="text-white font-semibold text-sm">Frontend</span>
                                 <p class="text-gray-500 text-xs">React/Vue · Tailwind CSS · Livewire</p>
                             </div>
                         </div>
@@ -284,7 +283,7 @@
     <section id="projects" class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
             <div class="text-center mb-16 border-b border-white/5 pb-6">
-                <h2 class="text-[#00D1FF] font-semibold tracking-widest uppercase text-xs mb-3">Discovered Worlds</h2>
+                <h2 class="text-[#00D1FF] font-semibold tracking-widest uppercase text-xs mb-3">Key Project</h2>
                 <h3 class="text-4xl font-bold font-heading text-white">Selected Portfolio</h3>
             </div>
 
@@ -322,7 +321,7 @@
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#1A1F2E]/80 rounded-full blur-[100px] z-0"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-[#FFB800] font-semibold tracking-widest uppercase text-xs mb-3">Mission Control Directive</h2>
+                <h2 class="text-[#FFB800] font-semibold tracking-widest uppercase text-xs mb-3">How I Work</h2>
                 <h3 class="text-4xl font-bold font-heading text-white">My Workflow</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-0">
@@ -381,8 +380,8 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
             <div class="text-center mb-16 relative z-10">
-                <h2 class="text-[#6C63FF] font-semibold tracking-widest uppercase text-xs mb-3">Mission Log</h2>
-                <h3 class="text-4xl font-bold font-heading text-white">My Experience</h3>
+                <h2 class="text-[#6C63FF] font-semibold tracking-widest uppercase text-xs mb-3">Experience</h2>
+                <h3 class="text-4xl font-bold font-heading text-white">Work Experience</h3>
             </div>
 
             <!-- Vertical Line -->
@@ -446,8 +445,10 @@
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-gradient-to-t from-[#6C63FF]/10 to-transparent blur-[50px] z-0"></div>
 
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h2 class="text-4xl md:text-4xl font-bold font-heading text-white mb-4">Have a project mission?</h2>
-            <p class="text-gray-400 mb-12">Let's build something amazing together.</p>
+            <h2 class="text-4xl md:text-4xl font-bold font-heading text-white mb-4">Let’s Build Something Great</h2>
+            <p class="text-gray-400 mb-12">
+                I’m available for freelance projects and remote opportunities. If you have an idea or need help building a system, feel free to reach out.
+            </p>
 
             <div class="glass-card p-8 md:p-12 rounded-2xl text-left border-t border-[#6C63FF]/30 shadow-[0_-10px_40px_rgba(108,99,255,0.1)]">
                 @if(session('success'))
@@ -490,7 +491,7 @@
                     </div>
                     
                     <button type="submit" class="w-full inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded bg-transparent border-2 border-[#6C63FF] text-white hover:bg-[#6C63FF] shadow-[0_0_15px_rgba(108,99,255,0.3)] hover:shadow-[0_0_30px_rgba(108,99,255,0.6)] transition-all duration-300 uppercase tracking-widest">
-                        Send Transmission
+                        Contact Me
                     </button>
                 </form>
             </div>

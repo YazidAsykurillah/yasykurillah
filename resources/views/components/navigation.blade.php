@@ -15,10 +15,10 @@
                 <a href="{{ request()->is('/') ? '#services' : '/#services' }}" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Services</a>
                 <a href="/portfolio" class="text-sm font-medium {{ request()->is('portfolio') ? 'text-white border-b border-[#6C63FF]' : 'text-gray-400' }} hover:text-white transition-colors">Portfolio</a>
                 
-                <a href="{{ request()->is('/') ? '#contact' : '/#contact' }}" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium transition-all duration-300 rounded border border-[#6C63FF]/50 text-white hover:bg-[#6C63FF]/10 shadow-[0_0_15px_rgba(108,99,255,0.2)] hover:shadow-[0_0_25px_rgba(108,99,255,0.4)] group">
-                    Initialize Contact 
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                <a href="{{ asset('resume_yazid_asykurillah.pdf') }}" download class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium transition-all duration-300 rounded border border-[#6C63FF]/50 text-white hover:bg-[#6C63FF]/10 shadow-[0_0_15px_rgba(108,99,255,0.2)] hover:shadow-[0_0_25px_rgba(108,99,255,0.4)] group">
+                    Download Resume
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="ml-2 w-4 h-4 group-hover:translate-y-1 transition-transform duration-300">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                     </svg>
                 </a>
             </div>
@@ -40,10 +40,10 @@
             <a href="{{ request()->is('/') ? '#about' : '/#about' }}" class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-[#6C63FF]/10 rounded-md transition-colors mobile-link">About</a>
             <a href="{{ request()->is('/') ? '#services' : '/#services' }}" class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-[#6C63FF]/10 rounded-md transition-colors mobile-link">Services</a>
             <a href="/portfolio" class="block px-4 py-3 text-base font-medium {{ request()->is('portfolio') ? 'text-white bg-[#6C63FF]/10' : 'text-gray-300' }} hover:text-white hover:bg-[#6C63FF]/10 rounded-md transition-colors mobile-link">Portfolio</a>
-            <a href="{{ request()->is('/') ? '#contact' : '/#contact' }}" class="flex items-center justify-center px-4 py-3 mt-6 text-center text-base font-medium rounded border border-[#6C63FF]/50 text-white bg-[#6C63FF]/10 shadow-[0_0_15px_rgba(108,99,255,0.2)] mobile-link group">
-                Initialize Contact
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="ml-2 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+            <a href="{{ asset('resume_yazid_asykurillah.pdf') }}" download class="flex items-center justify-center px-4 py-3 mt-6 text-center text-base font-medium rounded border border-[#6C63FF]/50 text-white bg-[#6C63FF]/10 shadow-[0_0_15px_rgba(108,99,255,0.2)] mobile-link group">
+                Download Resume
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform duration-300">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                 </svg>
             </a>
         </div>
