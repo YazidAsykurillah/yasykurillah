@@ -168,7 +168,7 @@
 
                     <div class="relative z-20 flex items-center justify-center">
                         <div class="w-24 h-24 rounded-full border border-[#1F2937]/10 shadow-sm bg-[#FFFFFF] flex items-center justify-center relative z-10">
-                            <img src="{{ asset('abstract-logo.png') }}" alt="Core" class="w-14 h-14 object-contain opacity-90" />
+                            <span class="text-[#1F2937] font-bold font-heading tracking-widest text-xl">CORE</span>
                         </div>
                     </div>
 
@@ -387,8 +387,8 @@
                         <div class="bg-[#FFFFFF] hover:bg-[#F9FAFB] transition-colors border border-[#1F2937]/10 rounded-2xl p-8">
                             <div class="text-[#2563EB] font-semibold text-sm tracking-wider uppercase mb-3">2019 - PRESENT</div>
                             <h4 class="text-[#1F2937] font-bold text-2xl mb-1">Full Stack Engineer</h4>
-                            <div class="text-[#1F2937]/60 text-md mb-3">Bit Maker Automation.</div>
-                            <p class="text-[#1F2937]/70 leading-relaxed">Developed web applications with Laravel framework from backend to frontend.</p>
+                            <div class="text-[#1F2937]/60 text-md mb-3">Bit Maker Automation</div>
+                            <p class="text-[#1F2937]/80 leading-relaxed">Developed web applications with Laravel framework from backend to frontend.</p>
                         </div>
                     </div>
                 </div>
@@ -397,10 +397,10 @@
                 <div class="relative flex flex-col md:flex-row items-center justify-between group">
                     <div class="w-full md:w-[47%] text-left md:text-right order-2 md:order-1">
                         <div class="bg-[#FFFFFF] hover:bg-[#F9FAFB] transition-colors border border-[#1F2937]/10 rounded-2xl p-8 text-left">
-                            <div class="text-[#2563EB] font-semibold text-sm tracking-wider uppercase mb-3 text-left">2016 - 2019</div>
+                            <div class="text-[#2563EB] font-semibold text-sm tracking-wider uppercase mb-3 text-left">2017 - 2019</div>
                             <h4 class="text-[#1F2937] font-bold text-2xl mb-1 text-left">Web Developer</h4>
                             <div class="text-[#1F2937]/60 text-md mb-3 text-left">Prime Strategy Indonesia</div>
-                            <p class="text-[#1F2937]/70 leading-relaxed text-left">Developed wordpress plugins and web application with Laravel framework.</p>
+                            <p class="text-[#1F2937]/80 leading-relaxed text-left">Developed wordpress plugins and web application with Laravel framework.</p>
                         </div>
                     </div>
                     <div class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center w-8 h-8 rounded-full bg-[#FFFFFF] border border-[#1F2937]/10 hidden md:flex z-10 order-1 md:order-2">
@@ -417,10 +417,10 @@
                     </div>
                     <div class="w-full md:w-[47%]">
                         <div class="bg-[#FFFFFF] hover:bg-[#F9FAFB] transition-colors border border-[#1F2937]/10 rounded-2xl p-8">
-                            <div class="text-[#1F2937]/50 font-semibold text-sm tracking-wider uppercase mb-3">2016</div>
-                            <h4 class="text-[#1F2937] font-bold text-2xl mb-1">Junior Explorer</h4>
+                            <div class="text-[#2563EB] font-semibold text-sm tracking-wider uppercase mb-3 text-left">2017</div>
+                            <h4 class="text-[#1F2937] font-bold text-2xl mb-1">Junior Developer</h4>
                             <div class="text-[#1F2937]/60 text-md mb-3"></div>
-                            <p class="text-[#1F2937]/70 leading-relaxed">Began coding backend automation scripts and exploring PHP fundamentals before adopting the Laravel framework.</p>
+                            <p class="text-[#1F2937]/80 leading-relaxed">Began exploring PHP fundamentals before adopting the Laravel framework.</p>
                         </div>
                     </div>
                 </div>

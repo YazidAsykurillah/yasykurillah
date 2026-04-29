@@ -21,7 +21,6 @@
     <meta property="twitter:image" content="{{ $seo->ogImage }}">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('abstract-logo.png') }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

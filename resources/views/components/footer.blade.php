@@ -4,7 +4,6 @@
             <!-- Brand & Mission -->
             <div class="space-y-6">
                 <a href="/" class="font-heading font-bold text-2xl tracking-tight text-[#1F2937] flex items-center group">
-                    <img src="{{ asset('abstract-logo.png') }}" alt="Logo" class="w-8 h-8 mr-3 object-cover rounded-md" />
                     Yazid<span class="text-[#1F2937]/70 font-light">&nbsp;Asykurillah</span>
                 </a>
                 <p class="text-[#1F2937]/70 text-sm leading-relaxed max-w-xs">

@@ -4,7 +4,6 @@
         <div class="flex justify-between items-center h-20">
             <div class="flex-shrink-0 flex items-center">
                 <a href="/" class="font-heading font-bold text-2xl tracking-tight text-[#1F2937] flex items-center group">
-                    <img src="{{ asset('abstract-logo.png') }}" alt="Developer Logo" class="w-8 h-8 mr-3 object-cover rounded-md shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all duration-300" />
                     Yazid<span class="text-[#1F2937]/70 font-light">&nbsp;Asykurillah</span>
                 </a>
             </div>

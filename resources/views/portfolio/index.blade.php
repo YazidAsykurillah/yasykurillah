@@ -9,7 +9,7 @@
                 My <span class="text-[#2563EB]">Portfolio</span>
             </h1>
             <p class="text-[#1F2937]/70 max-w-2xl mx-auto leading-relaxed">
-                Exploring the digital systems and projects I've launched across the development universe.
+                Some of projects I've launched as a Full Stack Engineer.
             </p>
         </div>
     </section>
