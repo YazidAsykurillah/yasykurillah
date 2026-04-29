@@ -36,74 +36,17 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0B0F19;
-            color: #d1d5db;
+            background-color: #F9FAFB;
+            color: #1F2937;
             margin: 0;
         }
         h1, h2, h3, h4, .font-heading {
             font-family: 'Space Grotesk', sans-serif;
         }
 
-        /* Subtle Starfield CSS Animation */
-        .stars, .stars2, .stars3 {
-            position: fixed;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            pointer-events: none;
-            z-index: 0;
-            will-change: transform;
-        }
-
-        .stars {
-            background-image: 
-                radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(1px 1px at 40px 70px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(1.5px 1.5px at 50px 160px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0));
-            background-repeat: repeat;
-            background-size: 200px 200px;
-            animation: moveStars 100s linear infinite;
-            opacity: 0.3;
-        }
-
-        .stars2 {
-            background-image: 
-                radial-gradient(1px 1px at 10px 10px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(1.5px 1.5px at 150px 150px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 60px 170px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(1.5px 1.5px at 170px 60px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 180px 110px, #ffffff, rgba(0,0,0,0));
-            background-repeat: repeat;
-            background-size: 300px 300px;
-            animation: moveStars 150s linear infinite;
-            opacity: 0.2;
-        }
-
-        .stars3 {
-            background-image: 
-                radial-gradient(1px 1px at 50px 50px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(1.5px 1.5px at 200px 200px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 150px 300px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 300px 150px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(2.5px 2.5px at 350px 250px, #ffffff, rgba(0,0,0,0));
-            background-repeat: repeat;
-            background-size: 400px 400px;
-            animation: moveStars 200s linear infinite;
-            opacity: 0.1;
-        }
-
-        @keyframes moveStars {
-            0% { transform: translateY(0) translateX(0); }
-            100% { transform: translateY(-300px) translateX(300px); }
-        }
-
         .glass-card {
-            background: rgba(17, 24, 39, 0.85);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: #FFFFFF;
+            border: 1px solid rgba(31, 41, 55, 0.1);
             will-change: transform, border-color, box-shadow;
         }
         
@@ -112,28 +55,18 @@
         }
         
         .glass-card-hover:hover {
-            border-color: rgba(108, 99, 255, 0.3);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border-color: #2563EB;
+            box-shadow: 0 4px 20px rgba(31, 41, 55, 0.08);
             transform: translateY(-4px);
-            background: rgba(22, 30, 46, 0.95);
+            background: #F9FAFB;
         }
 
-        .text-neon-blue { color: #00D1FF; }
-        .text-cosmic-purple { color: #6C63FF; }
-        .text-star-gold { color: #FFB800; }
+        .text-accent-blue { color: #2563EB; }
     </style>
     @stack('styles')
 </head>
 <body class="antialiased relative">
-    
-    <!-- Deep Space Starfield -->
-    <div class="stars"></div>
-    <div class="stars2"></div>
-    <div class="stars3"></div>
-
-    <!-- Nebula Ambient Backgrounds -->
-    <div class="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-[#6C63FF] rounded-full blur-[150px] opacity-10 pointer-events-none z-0"></div>
-    <div class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#00D1FF] rounded-full blur-[150px] opacity-10 pointer-events-none z-0"></div>
+    <!-- Ambient Background removed for light mode -->
 
     <!-- Main Content Container (Sticky Footer wrapper) -->
     <div class="relative z-10 min-h-screen flex flex-col">
