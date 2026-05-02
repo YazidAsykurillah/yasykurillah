@@ -1,50 +1,57 @@
 <!-- Navigation -->
-<nav class="fixed left-0 right-0 z-50 top-0 transition-all duration-300 bg-[#F9FAFB]/90 backdrop-blur-md border-b border-[#1F2937]/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
-        <div class="flex justify-between items-center h-20">
-            <div class="flex-shrink-0 flex items-center">
-                <a href="/" class="font-heading font-bold text-2xl tracking-tight text-[#1F2937] flex items-center group">
-                    Yazid<span class="text-[#1F2937]/70 font-light">&nbsp;Asykurillah</span>
+<nav id="navbar" class="fixed left-0 right-0 z-50 top-0 transition-all duration-300 bg-transparent py-8">
+    <div class="max-w-[1600px] mx-auto px-6 md:px-[60px]">
+        <div class="flex justify-between items-center">
+            <!-- Logo area -->
+            <div class="flex-shrink-0 flex flex-col">
+                <a href="/" class="font-heading font-bold text-xl md:text-2xl tracking-tight text-[#111111] leading-none hover:text-[#FF6A00] transition-colors">
+                    YAZID
+                </a>
+                <a href="/" class="font-heading font-bold text-xl md:text-2xl tracking-tight text-[#111111] leading-none hover:text-[#FF6A00] transition-colors mt-1 flex items-center gap-1">
+                    ASYKURILLAH <span class="text-[#FF6A00] text-3xl leading-[0] mb-2">.</span>
                 </a>
             </div>
 
             <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="{{ request()->is('/') ? '#about' : '/#about' }}" class="text-sm font-medium text-[#1F2937]/70 hover:text-[#2563EB] transition-colors">About</a>
-                <a href="{{ request()->is('/') ? '#services' : '/#services' }}" class="text-sm font-medium text-[#1F2937]/70 hover:text-[#2563EB] transition-colors">Services</a>
-                <a href="/portfolio" class="text-sm font-medium {{ request()->is('portfolio') ? 'text-[#2563EB] border-b-2 border-[#2563EB]' : 'text-[#1F2937]/70' }} hover:text-[#2563EB] transition-colors">Portfolio</a>
-                
-                <a href="{{ asset('resume_yazid_asykurillah.pdf') }}" download class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium transition-all duration-300 rounded border border-[#2563EB] text-[#2563EB] hover:bg-[#2563EB] hover:text-white group">
-                    Download Resume
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="ml-2 w-4 h-4 group-hover:translate-y-1 transition-transform duration-300">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                    </svg>
-                </a>
+            <div class="hidden md:flex items-center space-x-12 font-mono-custom text-sm font-medium text-[#111111]">
+                <a href="{{ request()->is('/') ? '#about' : '/#about' }}" class="hover:text-[#FF6A00] transition-colors tracking-widest uppercase">[ ABOUT ]</a>
+                <a href="{{ request()->is('/') ? '#projects' : '/#projects' }}" class="hover:text-[#FF6A00] transition-colors tracking-widest uppercase">[ WORK ]</a>
+                <a href="{{ request()->is('/') ? '#expertise' : '/#expertise' }}" class="hover:text-[#FF6A00] transition-colors tracking-widest uppercase">[ EXPERTISE ]</a>
+                <a href="{{ request()->is('/') ? '#contact' : '/#contact' }}" class="hover:text-[#FF6A00] transition-colors tracking-widest uppercase flex items-center gap-1">[ CONTACT ] <span class="text-[#FF6A00]">+</span></a>
             </div>
 
             <!-- Mobile Menu Button -->
             <div class="md:hidden flex items-center">
-                <button id="mobile-menu-btn" class="text-[#1F2937] hover:text-[#2563EB] focus:outline-none p-2">
-                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
+                <button id="mobile-menu-btn" class="text-[#111111] hover:text-[#FF6A00] focus:outline-none p-2 font-mono-custom tracking-widest uppercase text-sm font-bold">
+                    [ MENU ]
                 </button>
             </div>
         </div>
     </div>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#F9FAFB]/95 backdrop-blur-xl border-b border-[#1F2937]/10 absolute w-full top-20 left-0 shadow-lg origin-top transition-transform transform scale-y-0 opacity-0 relative z-40">
-        <div class="px-6 pt-4 pb-8 space-y-3">
-            <a href="{{ request()->is('/') ? '#about' : '/#about' }}" class="block px-4 py-3 text-base font-medium text-[#1F2937]/80 hover:text-[#2563EB] hover:bg-[#2563EB]/10 rounded-md transition-colors mobile-link">About</a>
-            <a href="{{ request()->is('/') ? '#services' : '/#services' }}" class="block px-4 py-3 text-base font-medium text-[#1F2937]/80 hover:text-[#2563EB] hover:bg-[#2563EB]/10 rounded-md transition-colors mobile-link">Services</a>
-            <a href="/portfolio" class="block px-4 py-3 text-base font-medium {{ request()->is('portfolio') ? 'text-[#2563EB] bg-[#2563EB]/10' : 'text-[#1F2937]/80' }} hover:text-[#2563EB] hover:bg-[#2563EB]/10 rounded-md transition-colors mobile-link">Portfolio</a>
-            <a href="{{ asset('resume_yazid_asykurillah.pdf') }}" download class="flex items-center justify-center px-4 py-3 mt-6 text-center text-base font-medium rounded border border-[#2563EB] text-white bg-[#2563EB] shadow-sm mobile-link group">
-                Download Resume
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform duration-300">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                </svg>
-            </a>
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0F0F0F] absolute w-full top-full left-0 origin-top transition-transform transform scale-y-0 opacity-0 relative z-40 border-t border-[#242424]">
+        <div class="px-6 py-12 space-y-8 flex flex-col items-center">
+            <a href="{{ request()->is('/') ? '#about' : '/#about' }}" class="block font-mono-custom text-lg tracking-widest uppercase text-[#F5F5F5] hover:text-[#FF6A00] transition-colors mobile-link">[ ABOUT ]</a>
+            <a href="{{ request()->is('/') ? '#projects' : '/#projects' }}" class="block font-mono-custom text-lg tracking-widest uppercase text-[#F5F5F5] hover:text-[#FF6A00] transition-colors mobile-link">[ WORK ]</a>
+            <a href="{{ request()->is('/') ? '#expertise' : '/#expertise' }}" class="block font-mono-custom text-lg tracking-widest uppercase text-[#F5F5F5] hover:text-[#FF6A00] transition-colors mobile-link">[ EXPERTISE ]</a>
+            <a href="{{ request()->is('/') ? '#contact' : '/#contact' }}" class="block font-mono-custom text-lg tracking-widest uppercase text-[#F5F5F5] hover:text-[#FF6A00] transition-colors mobile-link">[ CONTACT ]</a>
         </div>
     </div>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-transparent', 'py-8');
+                navbar.classList.add('bg-[#E8E6E1]/95', 'backdrop-blur-md', 'py-4', 'border-b', 'border-[#242424]/10');
+            } else {
+                navbar.classList.add('bg-transparent', 'py-8');
+                navbar.classList.remove('bg-[#E8E6E1]/95', 'backdrop-blur-md', 'py-4', 'border-b', 'border-[#242424]/10');
+            }
+        });
+    });
+</script>

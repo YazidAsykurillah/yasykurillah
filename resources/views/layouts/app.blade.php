@@ -25,7 +25,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -33,34 +33,49 @@
     @endif
 
     <style>
+        :root {
+            --bg-primary: #0F0F0F;
+            --bg-secondary: #151515;
+            --bg-light: #E8E6E1;
+            --text-primary: #F5F5F5;
+            --text-secondary: #A1A1A1;
+            --border-custom: #242424;
+            --accent-color: #FF6A00;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F9FAFB;
-            color: #1F2937;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: var(--bg-light);
+            color: #111111;
             margin: 0;
-        }
-        h1, h2, h3, h4, .font-heading {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        .glass-card {
-            background: #FFFFFF;
-            border: 1px solid rgba(31, 41, 55, 0.1);
-            will-change: transform, border-color, box-shadow;
-        }
-        
-        .glass-card-hover {
-            transition: transform 0.3s ease-out, border-color 0.3s ease-out, box-shadow 0.3s ease-out, background-color 0.3s ease-out;
-        }
-        
-        .glass-card-hover:hover {
-            border-color: #2563EB;
-            box-shadow: 0 4px 20px rgba(31, 41, 55, 0.08);
-            transform: translateY(-4px);
-            background: #F9FAFB;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        .text-accent-blue { color: #2563EB; }
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Anton', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .font-mono-custom {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .bg-primary { background-color: var(--bg-primary); }
+        .bg-secondary { background-color: var(--bg-secondary); }
+        .bg-light { background-color: var(--bg-light); }
+        
+        .text-primary { color: var(--text-primary); }
+        .text-secondary { color: var(--text-secondary); }
+        .text-accent { color: var(--accent-color); }
+        
+        .border-custom { border-color: var(--border-custom); }
+
+        ::selection {
+            background-color: var(--accent-color);
+            color: var(--bg-primary);
+        }
     </style>
     @stack('styles')
 </head>

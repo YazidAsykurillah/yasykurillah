@@ -1,49 +1,46 @@
 @extends('layouts.app')
 
-
 @section('content')
     <!-- Portfolio Hero -->
-    <section class="min-h-[40vh] flex items-center justify-center relative overflow-hidden">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4 font-heading text-[#1F2937]">
-                My <span class="text-[#2563EB]">Portfolio</span>
+    <section class="min-h-[40vh] flex flex-col justify-end pt-32 pb-16 px-6 md:px-[60px] bg-light relative border-b border-[#242424]">
+        <div class="max-w-[1600px] mx-auto w-full">
+            <h1 class="font-heading text-5xl md:text-[7rem] leading-none tracking-tighter text-[#111111] mb-6">
+                ALL PROJECTS<span class="text-[#FF6A00]">.</span>
             </h1>
-            <p class="text-[#1F2937]/70 max-w-2xl mx-auto leading-relaxed">
-                Some of projects I've launched as a Full Stack Engineer.
+            <p class="font-mono-custom text-[#A1A1A1] text-sm md:text-base max-w-2xl uppercase tracking-widest leading-loose">
+                A COMPREHENSIVE ARCHIVE OF SYSTEMS, APPLICATIONS, AND DIGITAL PLATFORMS ENGINEERED FOR SCALE AND RELIABILITY.
             </p>
         </div>
     </section>
 
-    <!-- Projects Grid -->
-    <section class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
-            <div class="flex flex-wrap justify-center gap-8">
-                @foreach($portfolios as $portfolio)
-                    @php
-                        $featuredImage = $portfolio->images->where('is_featured', true)->first() ?? $portfolio->images->first();
-                        $imagePath = $featuredImage ? asset('storage/' . $featuredImage->path) : 'https://placehold.co/800x600/111827/6C63FF?text=No+Image';
-                    @endphp
-                    <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] max-w-sm">
-                        <x-project-card 
-                            :title="$portfolio->title" 
-                            :description="$portfolio->description"
-                            :image="$imagePath"
-                            :tags="$portfolio->techStacks->pluck('name')->toArray()"
-                            :slug="$portfolio->slug"
-                        />
+    <!-- Projects List -->
+    <section class="py-24 px-6 md:px-[60px] bg-primary text-primary min-h-[50vh]">
+        <div class="max-w-[1600px] mx-auto">
+            <div class="flex flex-col">
+                @forelse($portfolios as $portfolio)
+                    <x-project-card 
+                        :title="$portfolio->title" 
+                        :description="$portfolio->description"
+                        :tags="$portfolio->techStacks->pluck('name')->toArray()"
+                        :slug="$portfolio->slug"
+                        :index="$loop->iteration"
+                    />
+                @empty
+                    <div class="py-12 font-mono-custom text-[#A1A1A1] uppercase tracking-widest text-center">
+                        NO PROJECTS FOUND.
                     </div>
-                @endforeach
+                @endforelse
             </div>
         </div>
     </section>
 
     <!-- Call to Action -->
-    <section class="py-24 border-t border-[#1F2937]/10">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold font-heading text-[#1F2937] mb-6">Need a custom system built?</h2>
-            <p class="text-[#1F2937]/70 mb-10">I'm currently accepting new projects. Let's discuss your architectural needs.</p>
-            <a href="/#contact" class="inline-flex justify-center items-center px-10 py-4 text-base font-bold rounded bg-[#2563EB] text-white hover:bg-[#1D4ED8] shadow-sm hover:shadow-md transition-all duration-300">
-                Start Mission
+    <section class="py-32 px-6 md:px-[60px] bg-light text-[#111111] border-t border-[#242424] text-center">
+        <div class="max-w-[1600px] mx-auto">
+            <h2 class="font-heading text-4xl md:text-6xl tracking-tight mb-8">READY TO START?</h2>
+            <p class="font-mono-custom text-[#111111]/70 mb-12 uppercase tracking-widest text-sm max-w-xl mx-auto">I'M CURRENTLY ACCEPTING NEW PROJECTS. LET'S DISCUSS YOUR ARCHITECTURAL NEEDS.</p>
+            <a href="/#contact" class="inline-block border border-[#111111] hover:border-[#FF6A00] text-[#111111] hover:text-[#FF6A00] px-10 py-4 font-mono-custom text-xs uppercase tracking-widest transition-colors">
+                INITIATE TRANSMISSION &nbsp;→
             </a>
         </div>
     </section>

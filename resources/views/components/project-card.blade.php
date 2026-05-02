@@ -1,27 +1,29 @@
-@props(['title', 'description', 'image', 'tags' => [], 'slug' => '#'])
+@props(['title', 'description', 'image', 'tags' => [], 'slug'])
 
-<div class="glass-card glass-card-hover group rounded-2xl overflow-hidden transition-all duration-500 cursor-pointer" onclick="window.location.href='{{ route('portfolio.show', $slug) }}'">
-    <div class="aspect-[4/3] bg-[#F9FAFB] relative border-b border-[#1F2937]/10 overflow-hidden">
-        <!-- Project Screenshot Placeholder -->
-        <img src="{{ $image }}" alt="{{ $title }} Preview" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" />
-    </div>
-    <div class="p-8">
-        <h4 class="text-2xl font-bold font-heading text-[#1F2937] mb-3 flex items-center">
-            {{ $title }}
-        </h4>
-        <p class="text-[#1F2937]/70 text-sm mb-6 line-clamp-2">{!! strip_tags($description) !!}</p>
-        
-        <div class="flex flex-wrap gap-2 mb-6">
-            @foreach($tags as $tag)
-                <span class="px-2 py-1 text-xs text-[#2563EB] border border-[#2563EB]/30 bg-[#2563EB]/5 rounded">{{ $tag }}</span>
-            @endforeach
+<a href="/portfolio/{{ $slug }}" class="group block border-t border-[#242424] hover:bg-[#151515] transition-colors py-8 md:py-12">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+        <!-- Index/Number -->
+        <div class="md:col-span-1">
+            <span class="font-mono-custom text-[#A1A1A1] text-sm group-hover:text-[#FF6A00] transition-colors">0{{ $attributes->get('index', '1') }}</span>
         </div>
 
-        <div class="flex items-center space-x-4 border-t border-[#1F2937]/10 pt-4">
-            <a href="{{ route('portfolio.show', $slug) }}" class="text-[#1F2937]/70 hover:text-[#2563EB] transition-colors text-sm flex items-center">
-                <svg class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-                Show Detail
-            </a>
+        <!-- Project Info -->
+        <div class="md:col-span-8">
+            <h3 class="font-heading text-3xl md:text-4xl text-[#F5F5F5] uppercase tracking-wide mb-4 group-hover:text-[#FF6A00] transition-colors">
+                {{ $title }}
+            </h3>
+            <p class="text-[#A1A1A1] text-sm md:text-base leading-relaxed max-w-2xl font-mono-custom">
+                {{ \Illuminate\Support\Str::limit(strip_tags($description), 180) }}
+            </p>
+        </div>
+
+        <!-- Tags / Stack -->
+        <div class="md:col-span-3 flex flex-wrap gap-2 md:justify-end mt-6 md:mt-0">
+            <div class="flex flex-col items-start md:items-end text-right font-mono-custom text-xs text-[#A1A1A1] space-y-1">
+                @foreach($tags as $tag)
+                    <span class="uppercase">{{ $tag }}</span>
+                @endforeach
+            </div>
         </div>
     </div>
-</div>
+</a>
