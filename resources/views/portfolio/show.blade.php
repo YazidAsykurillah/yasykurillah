@@ -37,7 +37,7 @@
                         <h2 class="font-mono-custom text-[#A1A1A1] text-sm uppercase tracking-widest mb-8 pb-4 border-b border-[#242424]">
                             [ SYSTEM OVERVIEW ]
                         </h2>
-                        <div class="prose prose-invert prose-sm max-w-none text-[#F5F5F5]/70">
+                        <div class="prose prose-invert prose-sm max-w-none font-mono-custom text-[#F5F5F5]/70 leading-loose prose-headings:font-heading prose-headings:text-3xl prose-headings:text-[#F5F5F5] prose-headings:tracking-tighter prose-p:leading-loose prose-li:leading-loose prose-strong:text-[#FF6A00] prose-a:text-[#FF6A00] prose-a:no-underline prose-a:border-b prose-a:border-[#FF6A00]">
                             {!! $portfolio->description !!}
                         </div>
                     </div>
