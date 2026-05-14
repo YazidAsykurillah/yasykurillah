@@ -12,7 +12,7 @@
             <h3 class="font-heading text-3xl md:text-4xl text-[#F5F5F5] uppercase tracking-wide mb-4 group-hover:text-[#FF6A00] transition-colors">
                 {{ $title }}
             </h3>
-            <p class="text-[#A1A1A1] text-sm md:text-base leading-relaxed max-w-2xl font-mono-custom">
+            <p class="text-[#F5F5F5]/70 text-sm leading-loose max-w-2xl font-mono-custom">
                 {{ \Illuminate\Support\Str::limit(strip_tags($description), 180) }}
             </p>
         </div>

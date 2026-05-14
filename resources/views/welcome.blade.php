@@ -14,8 +14,9 @@
                     
                     <div class="mt-12 md:mt-24 font-mono-custom text-sm text-[#111111] space-y-2 uppercase tracking-widest relative">
                         <div class="w-6 h-[2px] bg-[#FF6A00] mb-6"></div>
-                        <p>Back End Development</p>
-                        <p>Front End Development</p>
+                        <p>Web Development</p>
+                        <p>API Integration</p>
+                        <p>Real-time system</p>
                     </div>
                 </div>
 
@@ -24,8 +25,6 @@
                     <div class="hidden lg:block mb-12 font-mono-custom text-xs text-[#111111] uppercase tracking-widest max-w-sm">
                         <p class="leading-relaxed">
                             I build scalable web application that solve real business problem.
-                            <br><br>
-                            Specialized in Laravel, API integration, and real-time systems
                         </p>
                     </div>
                     
