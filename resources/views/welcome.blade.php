@@ -14,7 +14,7 @@
                     
                     <div class="mt-12 md:mt-24 font-mono-custom text-sm text-[#111111] space-y-2 uppercase tracking-widest relative">
                         <div class="w-6 h-[2px] bg-[#FF6A00] mb-6"></div>
-                        <p>Web Development</p>
+                        <p>Web Application Development</p>
                         <p>API Integration</p>
                         <p>Real-time system</p>
                     </div>
