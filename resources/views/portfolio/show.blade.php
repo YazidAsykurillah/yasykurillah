@@ -37,7 +37,7 @@
                         <h2 class="font-mono-custom text-[#A1A1A1] text-sm uppercase tracking-widest mb-8 pb-4 border-b border-[#242424]">
                             [ SYSTEM OVERVIEW ]
                         </h2>
-                        <div class="font-mono-custom text-sm leading-loose text-[#F5F5F5]/80 uppercase prose-headings:font-heading prose-headings:text-2xl prose-headings:text-[#F5F5F5] prose-headings:mt-8 prose-headings:mb-4 prose-p:mb-6 prose-a:text-[#FF6A00] prose-a:border-b prose-a:border-[#FF6A00] prose-a:no-underline">
+                        <div class="prose prose-invert prose-sm max-w-none text-[#F5F5F5]/70">
                             {!! $portfolio->description !!}
                         </div>
                     </div>
@@ -92,35 +92,7 @@
 
                 <!-- Sidebar (Right - 4/12) -->
                 <div class="lg:col-span-4 flex flex-col gap-12">
-                    <!-- Project Stats -->
-                    <div>
-                        <h2 class="font-mono-custom text-[#A1A1A1] text-sm uppercase tracking-widest mb-8 pb-4 border-b border-[#242424]">
-                            [ PARAMETERS ]
-                        </h2>
-                        <div class="space-y-6 font-mono-custom text-sm uppercase">
-                            <div class="flex justify-between border-b border-[#242424] pb-2">
-                                <span class="text-[#A1A1A1]">STATUS</span>
-                                <span class="text-[#F5F5F5] flex items-center">
-                                    <span class="w-1.5 h-1.5 bg-[#FF6A00] rounded-full mr-2"></span>
-                                    DEPLOYED
-                                </span>
-                            </div>
-                            <div class="flex justify-between border-b border-[#242424] pb-2">
-                                <span class="text-[#A1A1A1]">DATE</span>
-                                <span class="text-[#F5F5F5]">{{ $portfolio->created_at->format('M Y') }}</span>
-                            </div>
-                            <div class="flex justify-between border-b border-[#242424] pb-2">
-                                <span class="text-[#A1A1A1]">ARCHITECTURE</span>
-                                <span class="text-[#F5F5F5] text-right">SCALABLE CORE</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-12">
-                            <a href="/#contact" class="inline-block w-full text-center border border-[#F5F5F5] hover:border-[#FF6A00] text-[#F5F5F5] hover:text-[#FF6A00] px-8 py-4 font-mono-custom text-xs uppercase tracking-widest transition-colors">
-                                REQUEST ACCESS &nbsp;→
-                            </a>
-                        </div>
-                    </div>
+
 
                     <!-- Technological Stack -->
                     <div>
@@ -133,6 +105,11 @@
                                     <span class="text-[#FF6A00]">+</span> {{ $stack->name }}
                                 </div>
                             @endforeach
+                        </div>
+                        <div class="mt-12">
+                            <a href="/#contact" class="inline-block w-full text-center border border-[#F5F5F5] hover:border-[#FF6A00] text-[#F5F5F5] hover:text-[#FF6A00] px-8 py-4 font-mono-custom text-xs uppercase tracking-widest transition-colors">
+                                REQUEST ACCESS &nbsp;→
+                            </a>
                         </div>
                     </div>
                 </div>
