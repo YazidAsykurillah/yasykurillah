@@ -24,7 +24,7 @@
                 <div class="lg:col-span-5 flex flex-col h-full justify-center">
                     <div class="hidden lg:block mb-12 font-mono-custom text-xs text-[#111111] uppercase tracking-widest max-w-sm">
                         <p class="leading-relaxed">
-                            I build scalable web application that solve real business problem.
+                            Frontend and backend Developer specialized in Laravel and modern JavaScript frameworks.
                         </p>
                     </div>
                     
@@ -117,7 +117,7 @@
                     
                     <div class="font-mono-custom text-sm text-[#111111]/80 space-y-6 leading-loose">
                         <p>
-                            WITH 7+ YEARS OF EXPERIENCE, I DESIGN AND DEVELOP SCALABLE WEB APPLICATIONS, BUSINESS SYSTEMS, AND API-DRIVEN PLATFORMS USING LARAVEL AND MODERN WEB TECHNOLOGIES.
+                            WITH 7+ YEARS OF EXPERIENCE, I DESIGN AND DEVELOP SCALABLE WEB APPLICATIONS, BUSINESS SYSTEMS, AND API-DRIVEN PLATFORMS USING MODERN WEB TECHNOLOGIES.
                         </p>
                         <p>
                             SPECIALIZED IN LARAVEL, API INTEGRATION, AND REAL-TIME SYSTEMS. I HAVE A PROVEN TRACK RECORD OF IMPROVING OPERATIONAL EFFICIENCY, AUTOMATING WORKFLOWS, AND DELIVERING HIGH-IMPACT BUSINESS SOLUTIONS.
@@ -157,7 +157,7 @@
                         <div class="bg-light p-8 flex flex-col justify-between aspect-square">
                             <svg class="w-6 h-6 text-[#111111] mb-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
                             <div>
-                                <div class="font-heading text-5xl text-[#111111] mb-2">10+</div>
+                                <div class="font-heading text-5xl text-[#111111] mb-2">5+</div>
                                 <div class="font-mono-custom text-[10px] uppercase tracking-widest text-[#111111]/60">TECHNOLOGIES<br/>MASTERED</div>
                             </div>
                         </div>
