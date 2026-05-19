@@ -24,7 +24,7 @@
                 <div class="lg:col-span-5 flex flex-col h-full justify-center">
                     <div class="hidden lg:block mb-12 font-mono-custom text-xs text-[#111111] uppercase tracking-widest max-w-sm">
                         <p class="leading-relaxed">
-                            Frontend and backend Developer specialized in Laravel and modern JavaScript frameworks.
+                            Frontend and backend Engineer specialized in Laravel and modern JavaScript frameworks.
                         </p>
                     </div>
                     
