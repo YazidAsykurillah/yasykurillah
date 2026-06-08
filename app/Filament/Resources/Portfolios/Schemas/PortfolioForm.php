@@ -33,6 +33,11 @@ class PortfolioForm
                                     ->required()
                                     ->unique(ignoreRecord: true),
 
+                                TextInput::make('url_link')
+                                    ->label('External Link')
+                                    ->url()
+                                    ->nullable(),
+
                                 RichEditor::make('description')
                                     ->required()
                                     ->columnSpanFull(),

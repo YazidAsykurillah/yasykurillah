@@ -107,9 +107,15 @@
                             @endforeach
                         </div>
                         <div class="mt-12">
-                            <a href="/#contact" class="inline-block w-full text-center border border-[#F5F5F5] hover:border-[#FF6A00] text-[#F5F5F5] hover:text-[#FF6A00] px-8 py-4 font-mono-custom text-xs uppercase tracking-widest transition-colors">
-                                REQUEST ACCESS &nbsp;→
-                            </a>
+                            @if($portfolio->url_link)
+                                <a href="{{ $portfolio->url_link }}" target="_blank" rel="noopener noreferrer" class="inline-block w-full text-center border border-[#F5F5F5] hover:border-[#FF6A00] text-[#F5F5F5] hover:text-[#FF6A00] px-8 py-4 font-mono-custom text-xs uppercase tracking-widest transition-colors">
+                                    VISIT LINK &nbsp;→
+                                </a>
+                            @else
+                                <a href="/#contact" class="inline-block w-full text-center border border-[#F5F5F5] hover:border-[#FF6A00] text-[#F5F5F5] hover:text-[#FF6A00] px-8 py-4 font-mono-custom text-xs uppercase tracking-widest transition-colors">
+                                    REQUEST ACCESS &nbsp;→
+                                </a>
+                            @endif
                         </div>
                     </div>
                 </div>
